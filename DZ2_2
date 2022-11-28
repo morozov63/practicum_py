@@ -1,0 +1,10 @@
+N = int(input('Введите число '))
+
+f = 1
+result = []
+for i in range(N):
+   i = i + 1
+   f = i * f
+   result.append(f)
+   
+print(result);
