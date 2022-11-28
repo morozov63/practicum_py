@@ -1,0 +1,12 @@
+N = (input('Укажите позиции через запятую:  '))
+
+x = N.split(",")
+result = list(map(int, x))
+
+y = [-2,-1,0,1,2]
+
+mult = 1
+for i in result:
+     mult = mult * y[i]  
+       
+print (mult)
