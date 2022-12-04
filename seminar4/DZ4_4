@@ -1,0 +1,12 @@
+# тут я так и не понял что надо, сделал по простому
+from random import randint
+k = 2
+A =  randint(0, 100)
+B =  randint(0, 100)
+C =  randint(0, 100)
+
+polinom = (f'{A}' '*x**' f'{k}' ' + ' f'{B}' '*x**' f'{k-1}' '+ ' f'{C}')
+
+data = open('file.txt', 'w') 
+data.writelines(polinom) 
+data.close()
