@@ -1,0 +1,16 @@
+import math
+
+d = 0.0001
+d1 = str(d)
+d2 = d1.split(".")
+
+try : 
+    pi_i = (len(d2[1])) # это работает до 4х знаков после запятой
+    print(pi_i)
+    rezult = round(math.pi ,pi_i)
+    print(rezult)
+except:
+    pi_i = int (d1[-1]) # в случае ошибки здесь довел до 9и знаков(пригодился try - except)
+    print(pi_i)
+    rezult = round(math.pi ,pi_i)
+    print(rezult)
