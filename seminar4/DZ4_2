@@ -1,0 +1,13 @@
+def Unik_num(n):
+    Num = []
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            Num.append(d)
+            n //= d
+        else:
+            d += 1
+    if n > 1:
+        Num.append(n)
+    return set(Num)
+print(Unik_num(144))
