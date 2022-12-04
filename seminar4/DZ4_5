@@ -1,0 +1,23 @@
+#у меня так пока и не получилось поставить pip, 
+# не знаю работает ли код, сделал по аналогии с семинаром
+import sympy
+x = sympy.Symbol('x')
+
+path = 'file1.txt'
+data1 = open(path,'r')
+for line1 in data1:
+    print(line1)
+data1.close()
+
+path = 'file2.txt'
+data2 = open(path,'r')
+for line2 in data2:
+    print(line2)
+
+rezult = sympy.simplify(line1 + line2)
+data3 = open('file3.txt', 'w') 
+data3.writelines(rezult)
+
+data3.close()
+data1.close()
+data2.close()
