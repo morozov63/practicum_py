@@ -1,0 +1,33 @@
+def play():
+    candies_total = 117
+    max_take = 28
+    count = 0
+
+
+    while candies_total > 0:
+        if count == 0:
+            step = int(input())
+            while step > candies_total or step > max_take:
+                step = int(input('можно взять только 28 конфет , попробуй еще раз: '))
+            
+        if candies_total > 0:
+            candies_total = candies_total - step
+            print(f'\nосталось {candies_total} конфет')
+            count = 1
+            if candies_total == 0:
+                print('Игра окончена, 1ый победил')
+
+        if count == 1:
+            step = int(input())
+            while step > candies_total or step > max_take:
+                step = int(input('можно взять только 28 конфет , попробуй еще раз: '))
+            
+        if candies_total > 0:
+            candies_total = candies_total - step
+            print(f'\nосталось {candies_total}конфет')
+            count = 0
+            if candies_total == 0 :
+
+              print('Игра окончена 2 ПОБЕДИЛ')
+
+play()
